@@ -34,7 +34,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                 padding: const EdgeInsets.all(16),
                 child: Text(
                    "$number1$operand$number2".isEmpty?"0":"$number1$operand$number2",
-                   style: TextStyle(
+                   style: const TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold
                 ),
@@ -75,7 +75,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
             onTap: () => onBtnTab(value) ,
             child: Center(
               child: Text(value,
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold ,color: Colors.white),),
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold ,color: Colors.white),),
             ),
           ),
         )
@@ -252,7 +252,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
       Btn.subtract,
       Btn.divide,
       Btn.calculate].contains(value)?Color(int.parse('0xFF212121')):
-    Color(0xFF727272);
+    const Color(0xFF727272);
   }
 
 }
